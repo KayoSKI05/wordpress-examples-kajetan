@@ -22,7 +22,7 @@ Folder zawiera zrzuty ekranu z interfejsu strony, które dokumentują wygląd po
 
 - **WordPress**
 - **WooCommerce**
-- **JavaScript, HTML, CSS**
+- **JavaScript, HTML, CSS, PHP**
 - **AI Integrations**
 
 ## Autor
