@@ -87,6 +87,7 @@ Uwaga: Aktualnie strona znajduje się na środowisku lokalnym (localhost), ponie
 
 ## ⚙️ Functionality Overview
 
+✅ Funkcjonalny sklep oraz dodane produkty (dokładnie 5,214)
 ✅ Formularze (emaile dochodzą i są chronione przed spamem)  
 ✅ Linki wewnętrzne i zewnętrzne  
 ✅ Responsywność (mobile, tablet, HD, Full HD)  
