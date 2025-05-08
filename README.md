@@ -12,5 +12,5 @@ Projekt ten zawiera pełną dokumentację, w tym szczegóły dotyczące struktur
    - Opis struktury strony,
    - Zastosowane technologie (WordPress, WooCommerce, dodatkowe wtyczki),
    - Sposób wdrożenia funkcjonalności sklepu,
-   - Zastosowane modyfikacje (np. personalizacja procesu zakupowego, integracje z systemami zewnętrznymi),
-   - Wymagania dotyczące serwera i konfiguracji.
+   - Zastosowane modyfikacje (np. integracje z systemami zewnętrznymi),
+
