@@ -1,3 +1,11 @@
+/**
+ * Plugin Name: Stromk - Free Shipping Info
+ * Description: Dynamicznie pokazuje klientowi, ile brakuje do darmowej dostawy w WooCommerce (AJAX + jQuery).
+ * Author: Kajetan (Stromk)
+ * Version: 1.0
+ */
+
+
 // AJAX: pobieranie sumy koszyka
 function stromk_get_cart_total_ajax() {
     if (WC()->cart) {
