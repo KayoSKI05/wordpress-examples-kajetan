@@ -24,9 +24,11 @@ Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dos
 - Zautomatyzowałem generowanie opisów przez ChatGPT w Google Sheets.
 - Stworzyłem własne funkcje w WooCommerce.
 - Ułatwiłem klientowi zarządzanie produktami bez konieczności wchodzenia do panelu WP.
-- Dodałem płatności WooPayments
+- Dodałem płatności WooPayments.
+- Dodałem opcje lokalnej dostawy lub odbioru osobistego.
 - Zoptymalizowałem całą stronę pod kątem szybkości oraz SEO.
 - Przygotowałem dokumentację kodu i automatyzacji.
+- Odpowiednio zabezpieczyłem przed atakami (plugin: WordFence).
 
 
 ## 🔧 Technologie i narzędzia
