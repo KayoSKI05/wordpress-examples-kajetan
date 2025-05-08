@@ -1,6 +1,6 @@
 ## 📁 shophalal4all
 
-Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dostawami w Sterling, VA. Projekt zawiera:
+Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dostawami w USA Sterling, VA. Projekt zawiera:
 
 - niestandardowe funkcje backendowe i frontendowe,
 - automatyzacje z wykorzystaniem AI (m.in. generowanie opisów produktów),
@@ -20,7 +20,8 @@ Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dos
 
 - Zoptymalizowałem proces zakupowy.
 - Zbudowałem całą stronę sam.
-- Znalazłem osobę do pomocy w dodaniu zdjęć do produktów.
+- Dodałem możliwość tworzenia konta.
+- Znalazłem osobę do pomocy w dodawaniu zdjęć do produktów.
 - Zautomatyzowałem generowanie opisów przez ChatGPT w Google Sheets.
 - Stworzyłem własne funkcje w WooCommerce.
 - Ułatwiłem klientowi zarządzanie produktami bez konieczności wchodzenia do panelu WP.
