@@ -44,6 +44,7 @@ Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dos
 - **Kajetan** - Twórca i główny programista projektu.
 
 ## Poniżej wklejam dokumentację, którą zrobiłem po skończeniu projektu
+Uwaga: Aktualnie strona znajduje się na środowisku lokalnym (localhost), ponieważ klient nie przedłużył umowy na hosting. Po odnowieniu umowy możliwe będzie ponowne uruchomienie wersji produkcyjnej.
 
 # 🛒 ShopHalal4All – Website Documentation 📄👦
 
