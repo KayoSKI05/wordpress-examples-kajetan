@@ -42,3 +42,62 @@ Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dos
 ## Autor
 
 - **Kajetan** - Twórca i główny programista projektu.
+
+# Poniżej wklejam dokumentację, którą zrobiłem po skończeniu projektu
+
+# 🛒 ShopHalal4All – Website Documentation 📄👦
+
+---
+
+## 📌 Basic Info
+
+- **Website URL:** [shophalal4all.com](https://shophalal4all.com)
+- **Date of Documentation:** 14.07.2024
+- **Theme Used:** Hello Elementor
+
+---
+
+## 🔒 Must-Have Plugins
+
+| Plugin                             | Status                                   |
+|-----------------------------------|------------------------------------------|
+| WPS Hide Login                    | Tak – ustawiono: `backdoor0000`          |
+| Akismet Anti-spam                 | Włączony – ochrona przed spamem          |
+| LiteSpeed Cache                   | Skonfigurowany                            |
+| Rank Math SEO                     | Zainstalowany                             |
+| Elementor                         | Aktywny                                  |
+| Complianz                         | Włączony i dostosowany                    |
+| Wordfence                         | Włączona ochrona                         |
+
+---
+
+## 🔌 Other Plugins Used
+
+- Code Snippets
+- FiboSearch – AJAX Search for WooCommerce
+- FlexStock
+- Popup Maker
+- Product Variations Swatches for WooCommerce
+- Shipday Integration for WordPress (WooCommerce)
+- WooCommerce Stripe Gateway
+- WP Mail SMTP
+
+---
+
+## ⚙️ Functionality Overview
+
+✅ Formularze (emaile dochodzą i są chronione przed spamem)  
+✅ Linki wewnętrzne i zewnętrzne  
+✅ Responsywność (mobile, tablet, HD, Full HD)  
+✅ Animacje (Elementor)  
+✅ Podpięte media społecznościowe  
+✅ Zoptymalizowana prędkość strony  
+✅ Strona z polityką prywatności  
+✅ Brak pustych / niedokończonych podstron  
+✅ Obsługa błędów (404 itd.) – przekierowania działają  
+✅ Płatności online (Stripe)  
+✅ Opcje dostawy (ShipDay)  
+✅ Integracja z Google Sheet do zarządzania produktami (FlexStock)  
+✅ Automatyzacja z ChatGPT w Google Sheet  
+✅ Dostosowane szablony e-maili WooCommerce  
+✅ Integracja z systemem dostaw (ShipDay)
