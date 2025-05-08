@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Carousel</title>
+
+    <!-- Załadowanie CSS dla Swipera (karuzela) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Kontener karuzeli - ustalamy szerokość, wysokość, marginesy, oraz overflow, by zdjęcia nie wychodziły poza kontener */
+        .swiper-container {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 0px;
+            overflow: hidden;
+            position: relative; /* Potrzebne do ustawienia przycisków nawigacyjnych */
+        }
+
+        /* Ustawienie wrappera karuzeli, by elementy były wyświetlane w linii */
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styl dla pojedynczego slajdu */
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Link w slajdzie */
+        .swiper-slide a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Stylizacja obrazków w karuzeli - okrągłe zdjęcia, z efektem po najechaniu */
+        .swiper-slide img {
+            border-radius: 50%; /* Okrągłe zdjęcia */
+            border: 2px solid #EAEAEA; /* Obwódka wokół zdjęcia */
+            width: 132px;
+            height: 132px;
+            z-index: 3;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Efekty animacji */
+        }
+
+        /* Efekt przy najechaniu na zdjęcie */
+        .swiper-slide img:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+            border: 2px solid #76C069; /* Zmiana koloru obwódki */
+        }
+
+        /* Stylizacja etykiet kategorii (tekst pod zdjęciem) */
+        .category-label {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-family: Inter !important; /* Ustalamy czcionkę */
+            font-weight: 600;
+            letter-spacing: -1px; /* Lekka korekta odstępu liter */
+            color: #222222;
+        }
+
+        /* Stylizacja przycisków do nawigacji po karuzeli */
+        .carousel-controls {
+            position: absolute;
+            top: 42%; /* Ustalamy pozycję na środku karuzeli */
+            left: -97px; /* Przesunięcie przycisków w lewo */
+            display: flex;
+            justify-content: space-between;
+            margin-right: 0px;
+            align-items: center;
+            width: 1390px;
+            transform: translateY(-50%); /* Centrowanie przycisków */
+        }
+
+        /* Stylizacja dla przycisków nawigacyjnych */
+        .carousel-controls button {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+            user-select: none;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Efekt przycisku po najechaniu */
+        .carousel-controls button:hover {
+            background-color: #FFFFFF;
+            color: #D3E5D0;
+            border-color: #D3E5D0;
+        }
+
+        /* Brak obramowania przy kliknięciu przycisku */
+        .carousel-controls button:focus {
+            outline: none;
+        }
+
+        /* Ustalamy rozmiar obrazka w przyciskach */
+        .carousel-controls button img {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kontener dla karuzeli -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Przykładowe slajdy - każdy składa się z linku do kategorii, obrazka i etykiety -->
+            <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/meat">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/Component-31meatsmeats.png" alt="Meat">
+                <div class="category-label">Meats</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/meat/deli">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/06/Component-38deli.png" alt="Deli">
+                <div class="category-label">Deli</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/pantry-essentials">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/rice.png">
+                <div class="category-label">Grains & Pasta</div>
+            </a>
+        </div>
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/dairies/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/dairies.png" alt="Dairies">
+                <div class="category-label">Dairies</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/spice-and-seasoning">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/Spices.png" alt="Spices">
+                <div class="category-label">Spice & Seasoning</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/oil-and-ghee/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/oil.png" alt="oil">
+                <div class="category-label">Oil & Ghee</div>
+            </a>
+        </div>
+        
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/confections/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/confectionsback.png" alt="Confections">
+                <div class="category-label">Confections</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/dry-fruits-and-nuts">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/dryfruitsnuts.png">
+                <div class="category-label">Dry Fruits & Nuts</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/kitchen-utensils">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/souces.png">
+                <div class="category-label">Sauces</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/groceries/snacks/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/snacks-category.png">
+                <div class="category-label">Snacks</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/spreadable">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/jam.png">
+                <div class="category-label">Spreadeble</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/soup">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/soup.png">
+                <div class="category-label">Soups</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/baking-supplies/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/bakiengsupplies.png" alt="Baking Supplies">
+                <div class="category-label">Baking Supplies</div>
+            </a>
+        </div>
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/groceries/beverages/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/drinks.png" alt="Drinks">
+                <div class="category-label">Beverages</div>
+            </a>
+        </div>
+        
+        
+        
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/pickled-foods">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/pickled-food-category.png" alt="Seafood">
+                <div class="category-label">Pickled Food</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/frozen-foods">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/frozen-food.png" alt="Snacks">
+                <div class="category-label">Frozen Foods</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/canned-foods-goods">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/canned-food-category.png" alt="Beverages">
+                <div class="category-label">Canned Food</div>
+            </a>
+        </div>
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/bread-bakery">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/breads.png" alt="Breads & Bakery">
+                <div class="category-label">Bread & Bakery</div>
+            </a>
+        </div>
+        
+        
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/kitchen-utensils">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/kitchenutensils.png">
+                <div class="category-label">Kitchen Utensils</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/cosmetics">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/cosmetics.png" alt="Cosmetics">
+                <div class="category-label">Cosmetics</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="http://localhost/stron/shophalalforall/product-category/products/household/">
+                <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/household.png" alt="Household">
+                <div class="category-label">Household</div>
+            </a>
+        </div>
+
+            <!-- Pozostałe kategorie -->
+            <!-- Można dodać dowolną liczbę slajdów, zależnie od potrzeb -->
+        </div>
+    </div>
+
+    <!-- Przyciski do nawigacji po karuzeli -->
+    <div class="carousel-controls">
+        <button id="prev">
+            <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/left-arrow_3681143.svg" alt="Previous">
+        </button>
+        <button id="next">
+            <img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/right-arrow_3681152.svg" alt="Next">
+        </button>
+    </div>
+
+    <!-- Załadowanie skryptu Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicjalizacja Swiper (karuzeli)
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 7, // Ustawienie liczby widocznych slajdów na raz
+            spaceBetween: 0,  // Brak przestrzeni pomiędzy slajdami
+            loop: true,       // Umożliwia zapętlenie karuzeli
+            autoplay: {
+                delay: 2500,  // Czas opóźnienia pomiędzy przejściami slajdów (2.5 sekundy)
+                disableOnInteraction: false, // Nie zatrzymuj autoplay przy interakcji
+            },
+            slidesPerGroup: 1, // Przechodzimy po jednym slajdzie na raz
+            navigation: {
+                nextEl: '#next', // Przycisk do przejścia na następny slajd
+                prevEl: '#prev', // Przycisk do przejścia na poprzedni slajd
+            },
+        });
+
+        // Zatrzymanie autoplay przy najechaniu na karuzelę
+        const swiperContainer = document.querySelector('.swiper-container');
+        swiperContainer.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop();  // Zatrzymanie autoplay przy najechaniu
+        });
+        swiperContainer.addEventListener('mouseleave', () => {
+            swiper.autoplay.start(); // Wznowienie autoplay przy wyjściu
+        });
+    </script>
+</body>
+</html>
