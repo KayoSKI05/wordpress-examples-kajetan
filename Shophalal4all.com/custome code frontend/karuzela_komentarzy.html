@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        /* Kontener całej karuzeli */
+        .carousel-container {
+            width: 1200px;
+            height: 370px;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Wewnętrzny pasek z itemami */
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        /* Pojedynczy item w karuzeli */
+        .carousel-item {
+            min-width: calc(33.33% - 20px); /* Pokazuję 3 na raz, odejmuję marginesy */
+            box-sizing: border-box;
+            padding: 37px 20px 40px;
+            background: white;
+            border-radius: 25px;
+            border: 4px solid #F5F5F5;
+            margin: 0 10px;
+            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        /* Efekt hovera - delikatny cień i zmiana koloru obramowania */
+        .carousel-item:hover {
+            box-shadow: 0px 17px 50px -9px #E5E9F6;
+            border-color: #D3E5D0;
+        }
+
+        .carousel-item h3 {
+            margin-top: 0;
+            margin-bottom: 0px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* Sekcja z gwiazdkami i datą */
+        .carousel-item .meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .carousel-item .meta .stars {
+            color: gold;
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: -2px;
+            font-size: 32px;
+        }
+
+        .carousel-item .meta .date {
+            margin-top: 6px;
+            margin-left: 5px;
+            color: #9F9F9F;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .carousel-item p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: #9B9B9B;
+        }
+
+        /* Styl przycisków do przesuwania karuzeli */
+        .carousel-controls-two {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 110px;
+        }
+
+        /* Styl pojedynczego przycisku sterującego */
+        .carousel-controls-two button {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+            user-select: none;
+            border: 2px solid #BDBDBD;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .carousel-controls-two button:hover {
+            background-color: #FFFFFF;
+            color: #D3E5D0;
+            border-color: #D3E5D0;
+        }
+
+        .carousel-controls-two button:focus {
+            outline: none;
+        }
+
+        .carousel-controls-two button img {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kontener karuzeli -->
+    <div class="carousel-container">
+        <!-- Pasek z itemami -->
+        <div class="carousel">
+            <!-- Każdy item to osobna opinia klienta -->
+            <div class="carousel-item">
+                <h3>Ahmet Sami</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">12-08-2023</div>
+                </div>
+                <p>Was running late one night but I called and they made sure to stay open 5 minutes later for me to pick up our halal meat. Such kind and honest people!</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Baltimore</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">12-20-2023</div>
+                </div>
+                <p>Beyaz peynir, sucuk, salam, biskrem, helal et, yoğurt ve daha bir sürü Türk ürünü var. Çalışanlar çok kibar</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Lubna Hassan</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">01-11-2024</div>
+                </div>
+                <p>I was at halal4all today at 9 pm closing time. Mr Mohd Aleem was so kind and let me buy few things. I am really grateful to him. This store has a great customer service. 5 Stars</p>
+            </div>
+            <div class="carousel-item">
+                <h3>N Stoltz</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">01-14-2024</div>
+                </div>
+                <p>Visited Halal 4 All before Thanksgiving for a special cut of rack of lamb that I couldn't find at any butcher in this region. Sure enough, Karim, the butcher...</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Hamad Javaid</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">02-23-2024</div>
+                </div>
+                <p>Just visited Halal 4 All yesterday and met the owner. We talked for a few minutes while I placed an order for a few Ribeye steaks...s</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Tahirah Khan</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">02-27-2024</div>
+                </div>
+                <p>Not only is the store extremely clean, brand new, spacious and well organized, the owner and staff are extremely friendly and helpful...</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Karam Altayib</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">03-19-2024</div>
+                </div>
+                <p>Store is well organized, and most importantly very clean. The presentation of the meat is well displayed, and they have a nice variety...</p>
+            </div>
+            <div class="carousel-item">
+                <h3>A Pumpernickel</h3>
+                <div class="meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="date">04-28-2024</div>
+                </div>
+                <p>This is a fabulous addition to Loudoun County & that too at a great location. The store is clean, organized & the products all have...</p>
+            </div>
+        </div>
+
+        <!-- Przyciski do przesuwania w lewo i prawo -->
+        <div class="carousel-controls-two">
+            <button id="prev-two"><img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/Linessfesef.png"></button>
+            <button id="next-two"><img src="http://localhost/stron/shophalalforall/wp-content/uploads/2024/05/Lineprawa.svg" alt="Next"></button>
+        </div>
+    </div>
+
+    <script>
+        // Pobranie elementów z DOM
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.getElementById('prev-two');
+        const nextButton = document.getElementById('next-two');
+
+        let currentIndex = 0;
+        const itemWidth = carousel.querySelector('.carousel-item').offsetWidth + 20; // + marginesy
+
+        // Obsługa kliknięcia strzałki w lewo
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                // Jeśli jesteśmy na początku, idziemy na koniec
+                currentIndex = carousel.children.length - 3;
+            }
+            updateCarousel();
+        });
+
+        // Obsługa kliknięcia strzałki w prawo
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < carousel.children.length - 3) {
+                currentIndex++;
+            } else {
+                // Jeśli jesteśmy na końcu, wracamy do początku
+                currentIndex = 0;
+            }
+            updateCarousel();
+        });
+
+        // Funkcja do przesuwania karuzeli
+        function updateCarousel() {
+            const translateX = -currentIndex * itemWidth;
+            carousel.style.transform = `translateX(${translateX}px)`;
+        }
+
+        // Automatyczne przesuwanie co 3 sekundy
+        setInterval(() => {
+            if (currentIndex < carousel.children.length - 3) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }, 3000);
+    </script>
+</body>
+</html>
