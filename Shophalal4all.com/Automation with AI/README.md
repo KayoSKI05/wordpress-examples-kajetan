@@ -10,6 +10,6 @@ Do sklepu było dodane 4tyś produktów i trzeba było do nich dodać opisy i wp
 
 ## 🧠 Jak to działa
 1. Sklep WooCommerce synchronizuje produkty z Google Sheets przez FlexStock.
-2. W arkuszu można dodać prompt do ChatGPT.
+2. W arkuszu można dodać prompt do ChatGPT ale trzeba wykupić tokeny API Open AI aby działało.
 3. Funkcja `GPTFunction(prompt)` zwraca odpowiedź od modelu GPT-3.5 i zapisuje ją w komórce.
 
