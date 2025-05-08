@@ -1,29 +1,41 @@
-# ShopHalal4All - Strona internetowa sklepu spożywczego
+## 📁 shophalal4all
 
-## Opis
+Strona e-commerce oparta na WooCommerce, dla lokalnego sklepu spożywczego z dostawami w Sterling, VA. Projekt zawiera:
 
-ShopHalal4All to sklep internetowy oferujący szeroki asortyment produktów spożywczych oraz halal mięso. Strona została zaprojektowana i stworzona na platformie WordPress z wykorzystaniem WooCommerce. Celem projektu jest stworzenie prostego w obsłudze sklepu online, który umożliwia wygodne zakupy online, z dostawą na zamówienie.
+- niestandardowe funkcje backendowe i frontendowe,
+- automatyzacje z wykorzystaniem AI (m.in. generowanie opisów produktów),
+- integrację z Google Sheets do zarządzania produktami przez klientów przy pomocy wtyczki FlexStock,
+- zrzuty ekranu przedstawiające wygląd strony.
+  
 
-## Foldery w projekcie:
+### Struktura folderu:
 
-### 1. **Automation with AI**
-Ten folder zawiera kody związane z integracjami opartymi na sztucznej inteligencji, które zostały dodane do strony. Wykorzystano je m.in. do automatyzacji działań marketingowych, zarządzania asortymentem oraz optymalizacji procesów związanych z obsługą klienta.
+- `automacje-z-ai` – skrypty z wykorzystaniem ChatGPT do generowania treści z poziomu Google Sheets,
+- `customowe-kody-funkcje` – funkcje backendowe (np. ukrywanie produktów z kategorii „bez kategorii”),
+- `customowe-kody-frontend` – np. modyfikacje main page, karuzela z kategoriami,
+- `screenshots` – zrzuty ekranu strony i googlesheet.
 
-### 2. **Custome code frontend**
-Folder zawiera kody front-endowe, które zmieniają wygląd i interakcje na stronie. Znajdziesz tutaj m.in. niestandardowe style CSS, skrypty JavaScript do dynamicznej zmiany elementów na stronie, a także optymalizacje interfejsu użytkownika, które poprawiają doświadczenia zakupowe.
 
-### 3. **Custome code functions**
-W tym folderze znajdują się niestandardowe kody, które zostały zaimplementowane w celu dostosowania strony do specyficznych wymagań. Dotyczy to m.in. zmian w funkcjonalnościach WooCommerce.
+## 🧠 Co zrobiłem w tym projekcie?
 
-### 4. **Screenshots**
-Folder zawiera zrzuty ekranu z interfejsu strony, które dokumentują wygląd poszczególnych sekcji sklepu, takich jak strona główna, koszyk, proces zakupowy i inne kluczowe elementy strony. Zrzuty te mogą być użyteczne do celów dokumentacji, prezentacji lub analizy.
+- Zoptymalizowałem proces zakupowy.
+- Zbudowałem całą stronę sam.
+- Znalazłem osobę do pomocy w dodaniu zdjęć do produktów.
+- Zautomatyzowałem generowanie opisów przez ChatGPT w Google Sheets.
+- Stworzyłem własne funkcje w WooCommerce.
+- Ułatwiłem klientowi zarządzanie produktami bez konieczności wchodzenia do panelu WP.
+- Dodałem płatności WooPayments
+- Zoptymalizowałem całą stronę pod kątem szybkości oraz SEO.
+- Przygotowałem dokumentację kodu i automatyzacji.
 
-## Technologie
 
-- **WordPress**
-- **WooCommerce**
-- **JavaScript, HTML, CSS, PHP**
-- **AI Integrations**
+## 🔧 Technologie i narzędzia
+
+- WordPress, WooCommerce
+- PHP, JavaScript
+- Google Apps Script (integracja AI)
+- Git, GitHub
+- FlexStock, inne pluginy
 
 ## Autor
 
